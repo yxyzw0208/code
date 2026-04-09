@@ -15,7 +15,10 @@ struct student{
 };
 bool cmp(const student&a,const student&b){
     if(a.sum!=b.sum) return a.sum>b.sum;
-    else return a.ch>b.ch;
+    else {
+        if(a.ch!=b.ch) return a.ch>b.ch;
+        else return a.id<b.id;
+    }
 }
 
 int main(){
